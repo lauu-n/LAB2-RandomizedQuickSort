@@ -41,5 +41,5 @@ pip install matplotlib numpy
 
 ### Integrantes:
   - Carol Arenas
-  -Yeimy Beltrán
+  - Yeimy Beltrán
   - Laura Niño
