@@ -68,8 +68,9 @@ def run_experiment(n, num_experiments):
 
 # ──────────────────────────────────────────────
 # 3. CONFIGURACIÓN DE EXPERIMENTOS
-sizes = [1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000]
+sizes = [1_000, 5_000, 10_000, 50_000, 100_000, 500_000, 1_000_000, 10_000_000]
 EXPERIMENTS_DEFAULT = 100
+EXPERIMENTS_LARGE   = 10    # para 10 millones
 print("=" * 55)
 print("  Randomized Quicksort — Análisis de Tiempo")
 print("=" * 55)
@@ -80,7 +81,7 @@ avg_times   = []
 avg_memories = []
 
 for n in sizes:
-    num_exp = EXPERIMENTS_DEFAULT
+    num_exp = EXPERIMENTS_LARGE if n == 10_000_000 else EXPERIMENTS_DEFAULT
     avg_t, avg_mem = run_experiment(n, num_exp)
     avg_times.append(avg_t)
     avg_memories.append(avg_mem)
